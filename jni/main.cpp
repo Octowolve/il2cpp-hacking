@@ -35,7 +35,7 @@ void* main_thread(void*){
         const Il2CppImage* image = il2cpp_assembly_get_image(*assembly_list);
         Il2CppClass* clazz = il2cpp_class_from_name(image, "<Namespace> ", "<Classname> Player");
 
-        //octo_hook((unsigned long)il2cpp_class_get_method_from_name(clazz, "<Your Method> PlayerUpdate", 1)->methodPointer, (void*)Player_Update, (void**)&old_Player_Update)
+        //octo_hook((DWORD)il2cpp_class_get_method_from_name(clazz, "<Your Method> PlayerUpdate", 1)->methodPointer, (void*)Player_Update, (void**)&old_Player_Update)
     }
 
 }
