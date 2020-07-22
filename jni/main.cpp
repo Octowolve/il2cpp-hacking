@@ -11,6 +11,9 @@
 
 
 void* main_thread(void*){
+    do {
+        sleep(1);
+    } while (!isLibraryLoaded("libil2cpp.so"));
     il2cpp_handle = dlopen("libil2cpp.so", RTLD_LAZY);
     if(!il2cpp_handle){
         LOGE("Cannot open library: %s", dlerror());
@@ -22,7 +25,6 @@ void* main_thread(void*){
         il2cpp_class_from_name_ il2cpp_class_from_name = (il2cpp_class_from_name_)dlsym(il2cpp_handle, "il2cpp_class_from_name");
         il2cpp_class_get_method_from_name_ il2cpp_class_get_method_from_name = (il2cpp_class_get_method_from_name_)dlsym(il2cpp_handle, "il2cpp_class_get_method_from_name");
         sleep(2);
-        LOGD("hack game begin");
         Il2CppDomain* domain = il2cpp_domain_get();
         unsigned long ass_len = 0;
         const Il2CppAssembly** assembly_list = il2cpp_domain_get_assemblies(domain, &ass_len);
