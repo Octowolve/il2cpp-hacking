@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="il2cpp_hacking_so.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{d1489e6e-b636-45d2-a181-19c50260628e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="logger.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="il2cpp.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
