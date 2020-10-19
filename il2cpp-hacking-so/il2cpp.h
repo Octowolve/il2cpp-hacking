@@ -25,7 +25,7 @@ typedef const char16_t* (*il2cpp_string_chars_t) (Il2CppString* string);
 typedef const PropertyInfo* (*il2cpp_class_get_property_from_name_t) (Il2CppClass* klass, const char* name);
 typedef Il2CppMethod* (*il2cpp_property_get_get_method_t) (PropertyInfo* prop);
 
-struct Runtime {
+struct Il2cppRuntime {
 	static void* GetIL2CPPModule()
 	{
 		auto mod = dlopen("libil2cpp.so", RTLD_LAZY);
